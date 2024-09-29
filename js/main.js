@@ -2,8 +2,14 @@ function login() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
     if(username === "hermosa" && password === "empresaria") {
-        document.getElementById('loginForm').style.display = 'none';
-        document.getElementById('content').style.display = 'block';
+        document.getElementById('loginForm').style.opacity = '0';
+        setTimeout(() => {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('content').style.opacity = '1';
+            }, 50);
+        }, 500);
         showMessage();
     } else {
         alert("Ups, parece que hay un error. ¿Podrías intentarlo de nuevo?");
@@ -19,5 +25,19 @@ function showMessage() {
         "La distancia solo hace que mi cariño por ti crezca más."
     ];
     var randomMessage = messages[Math.floor(Math.random() * messages.length)];
-    alert(randomMessage);
+    setTimeout(() => {
+        alert(randomMessage);
+    }, 1000);
 }
+
+function animateElements() {
+    const elements = document.querySelectorAll('#content > *');
+    elements.forEach((el, index) => {
+        setTimeout(() => {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        }, index * 200);
+    });
+}
+
+document.getElementById('content').addEventListener('transitionend', animateElements);

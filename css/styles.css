@@ -92,6 +92,8 @@ button:hover {
 
 #content {
     display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .message {
@@ -123,4 +125,47 @@ button:hover {
 
 .special-image:hover {
     transform: scale(1.05);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+#content > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+    }
+    
+    .rose {
+        font-size: 40px;
+    }
+    
+    .special-image {
+        max-width: 90%;
+    }
 }
