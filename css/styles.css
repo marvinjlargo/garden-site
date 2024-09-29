@@ -1,0 +1,110 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #3a4a5e;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+.rose {
+    font-size: 50px;
+    margin: 20px 0;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input {
+    background-color: #f0f4f8;
+    border: 1px solid #d0d9e6;
+}
+
+button {
+    background-color: #3a4a5e;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #4e6279;
+}
+
+#content {
+    display: none;
+}
+
+.message {
+    font-style: italic;
+    margin: 15px 0;
+    color: #5a6b7f;
+    line-height: 1.6;
+}
+
+.signature {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-align: right;
+    color: #3a4a5e;
+}
