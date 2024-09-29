@@ -41,3 +41,9 @@ function animateElements() {
 }
 
 document.getElementById('content').addEventListener('transitionend', animateElements);
+
+document.addEventListener('touchstart', function(event) {
+    if (event.target.tagName === 'INPUT') {
+        event.target.style.fontSize = '16px';
+    }
+}, false);

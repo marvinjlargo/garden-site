@@ -147,10 +147,12 @@ button:hover {
 @media (max-width: 600px) {
     body {
         padding: 10px;
+        font-size: 16px;
     }
     
     .container {
-        padding: 20px;
+        padding: 15px;
+        max-width: 100%;
     }
     
     h1 {
@@ -161,11 +163,17 @@ button:hover {
         font-size: 1.3em;
     }
     
-    .rose {
-        font-size: 40px;
+    input, button {
+        font-size: 16px;
+        padding: 10px;
     }
     
     .special-image {
-        max-width: 90%;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .video-container {
+        padding-bottom: 75%;
     }
 }
