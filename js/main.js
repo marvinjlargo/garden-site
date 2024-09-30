@@ -1,7 +1,12 @@
+function decodeCredential(encoded) {
+    return atob(encoded);
+}
+
 function login() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
-    if(username === "hermosa" && password === "empresaria") {
+    if(username === decodeCredential(encodedCredentials.username) && 
+       password === decodeCredential(encodedCredentials.password)) {
         document.getElementById('loginForm').style.opacity = '0';
         setTimeout(() => {
             document.getElementById('loginForm').style.display = 'none';
