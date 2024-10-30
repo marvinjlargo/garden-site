@@ -56,7 +56,7 @@ function startSlideshow() {
     const imageContainer = document.querySelector('.image-container img');
     const images = [
         'images/image-1.jpg',
-        'images/image-2.JPG',
+        'images/image-2.jpg',
         'images/image-3.jpg',
         'images/image-4.jpg',
         'images/image-5.jpg',
