@@ -13,9 +13,11 @@ function login() {
             document.getElementById('content').style.display = 'block';
             setTimeout(() => {
                 document.getElementById('content').style.opacity = '1';
+                animateElements();
+                startSlideshow();
+                showMessage();
             }, 50);
         }, 500);
-        showMessage();
     } else {
         alert("Ups, parece que hay un error. ¿Podrías intentarlo de nuevo?");
     }
@@ -23,11 +25,16 @@ function login() {
 
 function showMessage() {
     var messages = [
-        "Recuerdo tu sonrisa, aunque estés lejos.",
-        "Eres la melodía que recuerdo en las tardes.",
-        "Tu éxito me inspira diariamente.",
-        "Cada logro tuyo es una razón más para admirarte.",
-        "La distancia solo hace que mi cariño por ti crezca."
+        "Tu sonrisa ilumina hasta los días más nublados.",
+        "Cada día es mejor al saber que estás en él.",
+        "Tu determinación es una inspiración constante.",
+        "Admiro cómo persigues tus sueños sin rendirte.",
+        "Espero que este mes te traiga muchas alegrías.",
+        "Tu pasión por lo que haces es contagiosa.",
+        "Siempre es un buen momento para desearte lo mejor.",
+        "Eres un ejemplo de esfuerzo y dedicación.",
+        "Cada meta que alcanzas es motivo de celebración.",
+        "Eres alguien muy especial."
     ];
     var randomMessage = messages[Math.floor(Math.random() * messages.length)];
     setTimeout(() => {
@@ -45,7 +52,22 @@ function animateElements() {
     });
 }
 
-document.getElementById('content').addEventListener('transitionend', animateElements);
+function startSlideshow() {
+    const imageContainer = document.querySelector('.image-container img');
+    const images = [
+        'images/image-1.jpg',
+        'images/image-2.JPG',
+        'images/image-3.jpg',
+        'images/image-4.jpg',
+        // Agrega aquí el resto de las imágenes en el folder 'images'
+    ];
+    let currentImageIndex = 0;
+
+    setInterval(() => {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        imageContainer.src = images[currentImageIndex];
+    }, 2000);
+}
 
 document.addEventListener('touchstart', function(event) {
     if (event.target.tagName === 'INPUT') {
