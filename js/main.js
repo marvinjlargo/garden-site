@@ -67,7 +67,7 @@ function startSlideshow() {
     setInterval(() => {
         currentImageIndex = (currentImageIndex + 1) % images.length;
         imageContainer.src = images[currentImageIndex];
-    }, 2000);
+    }, 3000);
 }
 
 document.addEventListener('touchstart', function(event) {
