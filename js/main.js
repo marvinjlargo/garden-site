@@ -59,6 +59,7 @@ function startSlideshow() {
         'images/image-2.JPG',
         'images/image-3.jpg',
         'images/image-4.jpg',
+        'images/image-5.jpg',
         // Agrega aquí el resto de las imágenes en el folder 'images'
     ];
     let currentImageIndex = 0;
